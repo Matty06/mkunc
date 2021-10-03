@@ -30,3 +30,7 @@ input {
     border: none;
     background: transparent;
 }
+
+h1 {@include fontSize($h1, 700, 1, $h1-mobile);}
+h2 {@include fontSize($h2, 700, 1, $h2-mobile);}
+p  {@include fontSize($p, 400, 2.4rem, $p-mobile);}

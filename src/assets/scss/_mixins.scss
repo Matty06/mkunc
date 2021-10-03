@@ -7,3 +7,14 @@
     width: $s;
     height: $s;
 }
+
+
+@mixin fontSize($fs, $fw, $lh, $fs-mobile) {
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+
+    @media all and (max-width: $tablet) {
+        font-size: $fs-mobile;
+    }
+}
