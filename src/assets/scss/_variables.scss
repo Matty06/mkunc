@@ -1,5 +1,28 @@
 // === GENERAL ===
-$img-path: '../images/';
+$layout:            1160px;
+$layout-sm:         960px;
+$section-gap:       10rem;
+$section-gap-sm:    7rem;
+$heading-gap:       3.5rem;
+$img-path:          '../images/';
+$emoji-icon-size:   8rem;
 
 // === COLORS ===
+$orange:       #ff4c29; 
+$dark-orange:  rgba(255, 76, 41, .5);
+$dark-blue:    #082032;
+$light-blue:   #334756;
+$white:        #fff;
+
 // === FONT SIZES ===
+$nav:       1.5rem;
+$h1:        2.6rem;
+$h1-mobile: 2.4rem;
+$h2:        2rem;
+$h2-mobile: 1.8rem;
+$p:         1.6rem;
+$p-sm:      1.4rem;
+$btn-md:    1.6rem;
+$btn-sm:    1.4rem;
+$form-text: 1.4rem;
+
