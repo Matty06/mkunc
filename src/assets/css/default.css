@@ -1,6 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&display=swap");
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+
+body {
+  max-width: 1160px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  font-family: 'Inconsolata', monospace;
+  background: #082032; }
+  body.overflow-hidden {
+    overflow-y: hidden; }
+
+main {
+  margin-top: 8rem; }
+
+section {
+  margin-bottom: 10rem; }
+  @media all and (max-width: 768px) {
+    section {
+      margin-bottom: 7rem; } }
 
 * {
   margin: 0;
@@ -10,6 +29,16 @@ html {
 
 ul, ol {
   list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #ff4c29;
+  -webkit-transition: .3s all;
+  transition: .3s all; }
+  a:hover, a:focus {
+    color: #c22000; }
+  a.underline {
+    text-decoration: underline; }
 
 button {
   background: none;
@@ -23,6 +52,10 @@ a {
 input {
   border: none;
   background: transparent; }
+
+h1,
+h2 {
+  color: #334756; }
 
 h1 {
   font-size: 3rem;
@@ -43,9 +76,132 @@ h2 {
 p {
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 2.4rem; }
+  line-height: 2.4rem;
+  color: #fff; }
   @media all and (max-width: 768px) {
     p {
       font-size: 1.4rem; } }
+
+.hamburger {
+  position: relative;
+  z-index: 2;
+  display: none;
+  margin-left: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all; }
+  .hamburger .line {
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 2.4rem;
+    height: 2px;
+    margin-bottom: 3.5px;
+    background-color: #ff4c29;
+    border-radius: 2px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .hamburger .line:last-child {
+      margin-bottom: 0; }
+  @media all and (max-width: 768px) {
+    .hamburger {
+      display: block; } }
+  .hamburger.open .line {
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all; }
+    .hamburger.open .line:nth-child(1) {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .hamburger.open .line:nth-child(2) {
+      opacity: 0; }
+    .hamburger.open .line:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .hamburger.open .line:nth-child(odd) {
+      position: absolute;
+      top: 0; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 2rem 0; }
+  @media all and (max-width: 425px) {
+    .header {
+      margin: 1rem 0; } }
+  .header nav {
+    margin-left: auto; }
+    @media all and (max-width: 768px) {
+      .header nav {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        top: 0;
+        left: 0;
+        display: none;
+        -webkit-transition: 0.4s all;
+        transition: 0.4s all; }
+        .header nav ul {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; } }
+    .header nav.isOpen {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .header nav.isOpen ul {
+        grid-gap: 2rem 0;
+        text-align: center; }
+  .header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-column-gap: 3.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1; }
+    @media all and (max-width: 768px) {
+      .header nav ul {
+        font-size: 1.4rem; } }
+
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0 15px;
+  margin-bottom: 3.5rem; }
+  .heading .emoji {
+    overflow: hidden;
+    width: 8rem;
+    height: 8rem;
+    border: 3px solid #334756;
+    border-radius: 50%; }
+  .heading .emoji img {
+    width: 100%; }
+    .heading .emoji img:first-child {
+      -webkit-transform: translateY(5px);
+      transform: translateY(5px); }
 
 /*# sourceMappingURL=default.css.map */

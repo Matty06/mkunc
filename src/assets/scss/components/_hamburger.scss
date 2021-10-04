@@ -1,0 +1,48 @@
+.hamburger {
+  position: relative;
+  z-index: 2;
+  display: none;
+  margin-left: auto;
+  transition: 0.3s all;
+
+  .line {
+    display: block;
+    flex-direction: column;
+    @include size(2.4rem, 2px);
+    margin-bottom: 3.5px;
+    background-color: $orange;
+    border-radius: 2px;
+    transition: all 0.3s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media all and (max-width: $tablet) {
+    display: block;
+  }
+
+  &.open {
+    .line {
+      transition: 0.3s all;
+
+      &:nth-child(1) {
+        transform: rotate($line-rotate-value);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-$line-rotate-value);
+      }
+
+      &:nth-child(odd) {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}

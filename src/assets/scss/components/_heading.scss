@@ -1,0 +1,21 @@
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  margin-bottom: $heading-gap;
+
+  .emoji {
+    overflow: hidden;
+    @include square($emoji-icon-size);
+    border: 3px solid $light-blue;
+    border-radius: 50%;
+  }
+
+  .emoji img {
+    width: 100%;
+
+    &:first-child {
+      transform: translateY(5px);
+    }
+  }
+}

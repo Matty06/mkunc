@@ -1,3 +1,8 @@
 @import 'variables';
 @import 'mixins';
 @import 'base';
+
+// === COMPONENTS ===
+@import './components/hamburger';
+@import './components/header';
+@import './components/heading';

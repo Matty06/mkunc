@@ -1,6 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&display=swap');
+
 html {
     font-size: 62.5%; // 10px --> 1rem
     scroll-behavior: smooth;
+}
+
+body {
+    max-width: $layout;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    font-family: 'Inconsolata', monospace;
+    background: $dark-blue;
+
+    &.overflow-hidden {
+        overflow-y: hidden;
+    }
+}
+
+main {
+    margin-top: 8rem;
+}
+
+section {
+    margin-bottom: $section-gap;
+
+    @media all and (max-width: $tablet) {
+        margin-bottom: $section-gap-sm;
+    }
 }
 
 * {
@@ -11,6 +37,21 @@ html {
 
 ul, ol {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $orange;
+    transition: .3s all;
+
+    &:hover,
+    &:focus {
+        color: darken($orange, 20%);
+    }
+
+    &.underline {
+        text-decoration: underline;
+    }
 }
 
 button {
@@ -31,6 +72,15 @@ input {
     background: transparent;
 }
 
+h1,
+h2 {
+    color: $light-blue;
+}
+
 h1 {@include fontSize($h1, 700, 1, $h1-mobile);}
 h2 {@include fontSize($h2, 700, 1, $h2-mobile);}
-p  {@include fontSize($p, 400, 2.4rem, $p-mobile);}
+
+p  {
+    @include fontSize($p, 400, 2.4rem, $p-mobile);
+    color: $white;
+}

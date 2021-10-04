@@ -19,14 +19,23 @@
 </head>
 
 <body>
-    <header>
-        <svg width="58" height="58" viewBox="0 0 58 58">
-            <text transform="translate(0 48)" fill="#ff4c29" font-size="48"
-                font-family="BallingerMono-Bold, Ballinger Mono" font-weight="700">
-                <tspan x="0" y="0">MK</tspan>
-            </text>
-        </svg>
-        <nav>
+    <header class="header">
+        <a href="/" class="header__logo">
+            <svg width="58" height="58" viewBox="0 0 58 58">
+                <text transform="translate(0 48)" fill="#ff4c29" font-size="48"
+                    font-family="BallingerMono-Bold, Ballinger Mono" font-weight="700">
+                    <tspan x="0" y="0">MK</tspan>
+                </text>
+            </svg>
+        </a>
+
+        <div class="hamburger" role="button" aria-label="menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div> 
+
+        <nav class="header__nav">
             <ul>
                 <li><a href="#about-me">About me</a></li>
                 <li><a href="#tech-stack">Tech stack</a></li>
@@ -35,19 +44,19 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section id="about-me">
-            <div class="heading">
+            <header class="heading">
                 <div class="emoji">
                     <img src="./assets/images/emoji/emoji-about-me.png" alt="hello emoji" />
                 </div>
                 <h1>About me</h1>
-            </div>
+            </header>
             <p>
                 Hi👋, my name is Matty and I’m self-taught frontend developer. Currently
                 I’m working for
-                <a href="https://designdev.cz/" target="_blank">designdev.cz</a>
+                <a href="https://designdev.cz/" class="underline" target="_blank">designdev.cz</a>
             </p>
             <p>
                 In my free time I like to educate myself and try new technologies, but I
@@ -66,12 +75,12 @@
         </section>
     
         <section id="tech-stack">
-            <div class="heading">
+            <header class="heading">
                 <div class="emoji">
-                    <img src="./assets/images/emoji/emoji-skills.png" alt="skills emoji" />
+                    <img src="./assets/images/emoji/emoji-skills.png" class="lazy-load" alt="skills emoji" />
                 </div>
                 <h1>Skills & Experience</h1>
-            </div>
+            </header>
     
             <div>
                 <h2><span class="icon icon--gear"></span>Technologies</h2>
@@ -101,13 +110,13 @@
         </section>
     
         <section id="projects">
-            <div class="heading">
+            <header class="heading">
                 <div class="emoji">
                     <img src="./assets/images/emoji/emoji-projects.png" alt="thankful emoji" />
                 </div>
     
                 <h1>Projects</h1>
-            </div>
+            </header>
     
             <div>
                 <div class="project project--motionlab">
@@ -122,13 +131,13 @@
         </section>
     
         <section id="contact">
-            <div class="heading">
+            <header class="heading">
                 <div class="emoji">
                     <img src="./assets/images/emoji/emoji-contact.png" alt="call-me emoji" />
                 </div>
     
                 <h1>Contact</h1>
-            </div>
+            </header>
     
             <div>
                 <form action="">
