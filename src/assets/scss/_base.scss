@@ -19,6 +19,10 @@ body {
 
 main {
     margin-top: 8rem;
+
+    @media all and (max-width: $tablet) {
+        margin-top: 5rem;
+    }
 }
 
 section {

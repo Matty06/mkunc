@@ -4,6 +4,10 @@
   gap: 0 15px;
   margin-bottom: $heading-gap;
 
+  @media all and (max-width: $tablet) {
+      margin-bottom: $heading-gap-sm;
+  }
+
   .emoji {
     overflow: hidden;
     @include square($emoji-icon-size);
