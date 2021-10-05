@@ -9,10 +9,15 @@
     @include square($emoji-icon-size);
     border: 3px solid $light-blue;
     border-radius: 50%;
+
+    @media all and (max-width: $tablet) {
+        @include square($emoji-icon-size - 2rem);
+    }
   }
 
   .emoji img {
     width: 100%;
+    animation: emojiAnimation 2s linear infinite;
 
     &:first-child {
       transform: translateY(5px);
