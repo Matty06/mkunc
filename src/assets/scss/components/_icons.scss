@@ -1,0 +1,28 @@
+$icons: 'gear', 'hammer', 'waving-hand';
+
+.icon {
+    position: relative;
+    top: .2rem;
+    display: inline-block;
+    @include square(1.8rem);
+    margin-right: .6rem;
+    background-size: cover;
+
+    &.icon-waving-hand {
+        margin-right: 0;
+    }
+
+    &.icon-gear {
+        animation: gear 2.5s infinite linear;
+    }
+
+    &.icon-hammer {
+        animation: hammer 1s infinite linear;
+    }
+}
+
+@each $icon in $icons {
+    .icon-#{$icon} {
+        background-image: url('#{$img-path}/icons/icon-#{$icon}.png');
+    }
+}

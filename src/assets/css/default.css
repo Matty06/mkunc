@@ -107,6 +107,38 @@ p {
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
+@-webkit-keyframes gear {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes gear {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes hammer {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg); } }
+
+@keyframes hammer {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg); } }
+
 .hamburger {
   position: relative;
   z-index: 2;
@@ -237,5 +269,31 @@ p {
     .heading .emoji img:first-child {
       -webkit-transform: translateY(5px);
       transform: translateY(5px); }
+
+.icon {
+  position: relative;
+  top: .2rem;
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: .6rem;
+  background-size: cover; }
+  .icon.icon-waving-hand {
+    margin-right: 0; }
+  .icon.icon-gear {
+    -webkit-animation: gear 2.5s infinite linear;
+    animation: gear 2.5s infinite linear; }
+  .icon.icon-hammer {
+    -webkit-animation: hammer 1s infinite linear;
+    animation: hammer 1s infinite linear; }
+
+.icon-gear {
+  background-image: url("../images//icons/icon-gear.png"); }
+
+.icon-hammer {
+  background-image: url("../images//icons/icon-hammer.png"); }
+
+.icon-waving-hand {
+  background-image: url("../images//icons/icon-waving-hand.png"); }
 
 /*# sourceMappingURL=default.css.map */
